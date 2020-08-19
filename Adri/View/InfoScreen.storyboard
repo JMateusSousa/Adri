@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Stb-gy-qls">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Info. medicamentos-->
+        <scene sceneID="lH3-GQ-HQp">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lyq-cI-7hz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="Stb-gy-qls" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info. medicamentos" image="book.circle" catalog="system" id="t4I-iE-wy9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q3B-Qf-6V4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dkg-As-fdG" kind="relationship" relationship="rootViewController" id="9EZ-iI-Vqn"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-755" y="151"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9wn-Ay-tWa">
+            <objects>
+                <viewController id="dkg-As-fdG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1IC-GU-NBP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações de medicamentos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXm-A9-DuM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="92"/>
+                                <color key="backgroundColor" red="0.36470588240000001" green="0.42352941179999998" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="lhq-ig-PNo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" placeholder="Pequisa" translatesAutoresizingMaskIntoConstraints="NO" id="fcE-vN-epg">
+                                <rect key="frame" x="0.0" y="160" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="31V-aw-5WS"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I3I-9p-2Yx">
+                                <rect key="frame" x="20" y="273" width="374" height="383"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="383" id="5o9-8J-4Ds"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="dM4-6U-ewq"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="IWZ-cm-5hv"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXs-pr-I7Y">
+                                <rect key="frame" x="20" y="232" width="109" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jtu-BI-3kJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.36470588240000001" green="0.42352941179999998" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hXm-A9-DuM" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" id="0NO-6M-b4h"/>
+                            <constraint firstItem="hXm-A9-DuM" firstAttribute="top" secondItem="YCk-Lc-Brc" secondAttribute="top" id="6lE-Mj-LdO"/>
+                            <constraint firstItem="gXs-pr-I7Y" firstAttribute="top" secondItem="fcE-vN-epg" secondAttribute="bottom" constant="28" id="CJ5-xH-XDd"/>
+                            <constraint firstItem="YCk-Lc-Brc" firstAttribute="trailing" secondItem="I3I-9p-2Yx" secondAttribute="trailing" constant="20" id="HdQ-gS-3PI"/>
+                            <constraint firstItem="I3I-9p-2Yx" firstAttribute="top" secondItem="gXs-pr-I7Y" secondAttribute="bottom" constant="20" id="JqH-RV-r5s"/>
+                            <constraint firstItem="fcE-vN-epg" firstAttribute="trailing" secondItem="YCk-Lc-Brc" secondAttribute="trailing" id="MOQ-5F-DYf"/>
+                            <constraint firstItem="fcE-vN-epg" firstAttribute="top" secondItem="hXm-A9-DuM" secondAttribute="bottom" constant="24" id="NPB-2k-USy"/>
+                            <constraint firstItem="gXs-pr-I7Y" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" constant="20" id="gzF-Cg-IXU"/>
+                            <constraint firstItem="I3I-9p-2Yx" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" constant="20" id="heX-IA-6YM"/>
+                            <constraint firstItem="fcE-vN-epg" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" id="pHI-33-eIA"/>
+                            <constraint firstItem="hXm-A9-DuM" firstAttribute="trailing" secondItem="YCk-Lc-Brc" secondAttribute="trailing" id="uwi-dc-vXG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YCk-Lc-Brc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="czp-vR-drR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vy0-pj-aGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215.94202898550725" y="150.81521739130437"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
