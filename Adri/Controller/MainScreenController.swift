@@ -8,21 +8,29 @@
 import Foundation
 import UIKit
 
-class MainScreenController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainScreenController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     static var medicines = [Medicine]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let medicine = Medicine(medicineName: "Tylenol", medicineHour: "10:00 AM\n18:00 PM")
+        let medicine = Medicine(medicineName: "Tylenol", medicineHour: "10 h \n18 h")
         MainScreenController.self.medicines.append(medicine)
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellIdentifier")
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
         
+}
+
+extension MainScreenController: UITableViewDataSource, UITableViewDelegate {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -33,10 +41,9 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TableViewCell
-        let medicine = MainScreenController.medicines[indexPath.row]
+        _ = MainScreenController.medicines[indexPath.row]
         cell.medicineName.text = MainScreenController.medicines[indexPath.row].medicineName
         cell.medicineHour.text = MainScreenController.medicines[indexPath.row].medicineHour
         return cell
     }
-
 }

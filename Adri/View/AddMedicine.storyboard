@@ -35,15 +35,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Começo do tratamento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ufm-7i-djQ">
-                                <rect key="frame" x="16" y="200" width="233" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="O1g-1G-hOz"/>
-                                </constraints>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duração do tratamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04e-fQ-XYD">
                                 <rect key="frame" x="16" y="276" width="189" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -113,6 +104,26 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6e-pi-pQ2">
+                                <rect key="frame" x="256" y="226.66666666666669" width="138" height="30"/>
+                                <color key="backgroundColor" red="0.36470588240000001" green="0.42352941179999998" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WAc-sd-a1z"/>
+                                    <constraint firstAttribute="width" constant="138" id="s5B-be-X5R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Agora">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startTreatment:" destination="GrI-yE-D0n" eventType="touchUpInside" id="pFq-1r-1id"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jag-iU-iCQ">
                                 <rect key="frame" x="132" y="539" width="150" height="35"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -132,54 +143,36 @@
                                     <action selector="toSave:" destination="GrI-yE-D0n" eventType="touchUpInside" id="X02-OM-a83"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7K-Sv-DVO">
-                                <rect key="frame" x="257" y="202" width="51" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="RmB-6Z-Dum"/>
-                                    <constraint firstAttribute="width" constant="51" id="gAh-JV-kXi"/>
-                                </constraints>
-                                <state key="normal" title="Hoje">
-                                    <color key="titleColor" red="0.36470588240000001" green="0.42352941179999998" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ltu-6j-NDb">
-                                <rect key="frame" x="316" y="206" width="76" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="76" id="WN1-HY-dHb"/>
-                                    <constraint firstAttribute="height" constant="22" id="eUE-4G-BKi"/>
-                                </constraints>
-                                <color key="tintColor" red="0.36470588240000001" green="0.42352941179999998" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="calendar" catalog="system">
-                                    <color key="titleColor" red="0.36470588240000001" green="0.42352941179999998" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Início do tratamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SR9-fE-rx4">
+                                <rect key="frame" x="16" y="231" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Jag-iU-iCQ" firstAttribute="centerX" secondItem="nzR-aO-6D6" secondAttribute="centerX" id="0Fv-mq-hED"/>
                             <constraint firstItem="Elz-kh-Uap" firstAttribute="top" secondItem="LRa-Vi-qn1" secondAttribute="bottom" constant="49" id="1ix-AZ-cgX"/>
                             <constraint firstItem="LRa-Vi-qn1" firstAttribute="centerX" secondItem="nzR-aO-6D6" secondAttribute="centerX" id="2Mg-nG-KRt"/>
-                            <constraint firstItem="Ltu-6j-NDb" firstAttribute="leading" secondItem="W7K-Sv-DVO" secondAttribute="trailing" constant="8" id="6KM-Hc-kbq"/>
-                            <constraint firstItem="W7K-Sv-DVO" firstAttribute="leading" secondItem="Ufm-7i-djQ" secondAttribute="trailing" constant="8" id="6ut-m6-aYg"/>
-                            <constraint firstItem="W7K-Sv-DVO" firstAttribute="centerY" secondItem="Ufm-7i-djQ" secondAttribute="centerY" id="79f-vD-5zZ"/>
-                            <constraint firstItem="Ltu-6j-NDb" firstAttribute="centerY" secondItem="Ufm-7i-djQ" secondAttribute="centerY" id="7Ab-9Q-N7a"/>
+                            <constraint firstItem="5hj-6V-wyF" firstAttribute="leading" secondItem="SR9-fE-rx4" secondAttribute="leading" id="5X5-A7-Jvt"/>
                             <constraint firstItem="7j2-fZ-ZX6" firstAttribute="bottom" secondItem="Jag-iU-iCQ" secondAttribute="bottom" constant="69" id="7Zf-AY-bGJ"/>
-                            <constraint firstItem="geq-Gn-StP" firstAttribute="leading" secondItem="Ufm-7i-djQ" secondAttribute="leading" id="7gf-sr-9jI"/>
                             <constraint firstItem="xxo-MG-p9F" firstAttribute="leading" secondItem="geq-Gn-StP" secondAttribute="trailing" constant="43" id="8Dh-sq-Vi2"/>
                             <constraint firstItem="XxZ-sN-Cxf" firstAttribute="centerY" secondItem="04e-fQ-XYD" secondAttribute="centerY" id="9Sv-Bq-r8f"/>
-                            <constraint firstItem="04e-fQ-XYD" firstAttribute="top" secondItem="Ufm-7i-djQ" secondAttribute="bottom" constant="42" id="ANf-Lt-WzC"/>
+                            <constraint firstItem="04e-fQ-XYD" firstAttribute="leading" secondItem="SR9-fE-rx4" secondAttribute="leading" id="AoZ-1e-iCM"/>
+                            <constraint firstItem="SR9-fE-rx4" firstAttribute="top" secondItem="Elz-kh-Uap" secondAttribute="bottom" constant="56" id="BRb-TZ-zp8"/>
                             <constraint firstItem="geq-Gn-StP" firstAttribute="top" secondItem="5hj-6V-wyF" secondAttribute="bottom" constant="24" id="Bfr-NI-Es2"/>
-                            <constraint firstItem="Ufm-7i-djQ" firstAttribute="leading" secondItem="7j2-fZ-ZX6" secondAttribute="leading" constant="16" id="CZu-9X-Gpk"/>
-                            <constraint firstItem="5hj-6V-wyF" firstAttribute="leading" secondItem="Ufm-7i-djQ" secondAttribute="leading" id="Cuw-Yq-oeY"/>
-                            <constraint firstItem="04e-fQ-XYD" firstAttribute="leading" secondItem="Ufm-7i-djQ" secondAttribute="leading" id="Gd0-tN-k8Z"/>
+                            <constraint firstItem="7j2-fZ-ZX6" firstAttribute="trailing" secondItem="i6e-pi-pQ2" secondAttribute="trailing" constant="20" id="FHN-Vh-Bzj"/>
                             <constraint firstItem="Elz-kh-Uap" firstAttribute="leading" secondItem="7j2-fZ-ZX6" secondAttribute="leading" constant="16" id="HTJ-fm-dNr"/>
                             <constraint firstItem="7j2-fZ-ZX6" firstAttribute="trailing" secondItem="Elz-kh-Uap" secondAttribute="trailing" constant="67" id="IdC-Tc-Xjd"/>
                             <constraint firstItem="UpD-3m-k9y" firstAttribute="centerY" secondItem="5hj-6V-wyF" secondAttribute="centerY" id="Mvj-XY-ax2"/>
-                            <constraint firstItem="Ufm-7i-djQ" firstAttribute="top" secondItem="Elz-kh-Uap" secondAttribute="bottom" constant="25" id="Sat-SY-7fb"/>
+                            <constraint firstItem="geq-Gn-StP" firstAttribute="leading" secondItem="SR9-fE-rx4" secondAttribute="leading" id="Rho-Tw-JdS"/>
+                            <constraint firstItem="i6e-pi-pQ2" firstAttribute="centerY" secondItem="SR9-fE-rx4" secondAttribute="centerY" id="Uvz-M1-zsG"/>
                             <constraint firstItem="LRa-Vi-qn1" firstAttribute="centerX" secondItem="nzR-aO-6D6" secondAttribute="centerX" id="VZa-MZ-g0c"/>
                             <constraint firstItem="LRa-Vi-qn1" firstAttribute="top" secondItem="7j2-fZ-ZX6" secondAttribute="top" id="XEd-AD-UeM"/>
+                            <constraint firstItem="SR9-fE-rx4" firstAttribute="leading" secondItem="7j2-fZ-ZX6" secondAttribute="leading" constant="16" id="aI0-or-jel"/>
+                            <constraint firstItem="04e-fQ-XYD" firstAttribute="top" secondItem="SR9-fE-rx4" secondAttribute="bottom" constant="24" id="alX-ug-5Do"/>
                             <constraint firstItem="UpD-3m-k9y" firstAttribute="leading" secondItem="5hj-6V-wyF" secondAttribute="trailing" constant="167" id="ar4-eP-JtU"/>
-                            <constraint firstItem="7j2-fZ-ZX6" firstAttribute="trailing" secondItem="Ufm-7i-djQ" secondAttribute="trailing" constant="165" id="cGh-uN-ynT"/>
                             <constraint firstItem="5hj-6V-wyF" firstAttribute="top" secondItem="04e-fQ-XYD" secondAttribute="bottom" constant="24" id="czT-iM-yhH"/>
                             <constraint firstItem="LRa-Vi-qn1" firstAttribute="top" secondItem="7j2-fZ-ZX6" secondAttribute="top" id="g7f-sZ-VPF"/>
                             <constraint firstItem="LRa-Vi-qn1" firstAttribute="trailing" secondItem="7j2-fZ-ZX6" secondAttribute="trailing" id="hpo-ME-YUR"/>
@@ -194,12 +187,12 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="medicineTextField" destination="Elz-kh-Uap" id="rSc-3z-op8"/>
-                        <outlet property="treatmentTextField" destination="Ufm-7i-djQ" id="ueI-xR-rSw"/>
+                        <outlet property="startTreatmentButton" destination="i6e-pi-pQ2" id="Ozd-Jh-97n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hyl-Cf-UXI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157" y="-51"/>
+            <point key="canvasLocation" x="146" y="12"/>
         </scene>
         <!--Adicionar-->
         <scene sceneID="8qG-oI-Ssk">
@@ -224,7 +217,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>
