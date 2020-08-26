@@ -17,6 +17,8 @@ class AddMedicineController: UIViewController {
     var toolBar = UIToolbar()
     var picker  = UIPickerView()
     var hour: [String] = []
+    static let memory = UserDefaults.standard
+    var indexMedicineDay: Int = 0
     
     func fillHour() {
         hour.append("Agora")
@@ -29,6 +31,10 @@ class AddMedicineController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fillHour()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print(indexMedicineDay)
     }
     
     private func getHourNow() -> String {
@@ -62,6 +68,14 @@ class AddMedicineController: UIViewController {
         let medicineHours = string
         let newMedicine = Medicine(medicineName: medicineTextField.text!, medicineHour: medicineHours)
         MainScreenController.medicines.append(newMedicine)
+        do {
+            try AddMedicineController.memory.setObject(newMedicine, forKey: String(indexMedicineDay) + "25/08")
+            AddMedicineController.memory.set(indexMedicineDay, forKey: "indexMedicineDay")
+            indexMedicineDay = 1 + indexMedicineDay
+            print(indexMedicineDay)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     @IBAction func startTreatment(_ sender: Any) {

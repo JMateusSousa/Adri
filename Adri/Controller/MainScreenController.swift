@@ -16,8 +16,15 @@ class MainScreenController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let medicine = Medicine(medicineName: "Tylenol", medicineHour: "10 h \n18 h")
-        MainScreenController.self.medicines.append(medicine)
+        // Coloca userDefaults no array de medicamentos
+        do {
+            let index = AddMedicineController.memory.integer(forKey: "indexMedicineDay")
+            for item in 0...index {
+                try MainScreenController.self.medicines.append(AddMedicineController.memory.getObject(forKey: String(item) + "25/08", castTo: Medicine.self))
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellIdentifier")
         tableView.delegate = self
         tableView.dataSource = self
@@ -26,7 +33,7 @@ class MainScreenController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
-        
+    
 }
 
 extension MainScreenController: UITableViewDataSource, UITableViewDelegate {

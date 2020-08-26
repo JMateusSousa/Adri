@@ -8,12 +8,17 @@
 
 import Foundation
 
-class Medicine: NSObject {
-    let medicineName: String
-    let medicineHour: String
-    
-    init(medicineName: String, medicineHour: String) {
-        self.medicineName = medicineName
-        self.medicineHour = medicineHour
-    }
+//class Medicine: Codable {
+//    let medicineName: String
+//    let medicineHour: String
+//
+//    init(medicineName: String, medicineHour: String) {
+//        self.medicineName = medicineName
+//        self.medicineHour = medicineHour
+//    }
+//}
+
+struct Medicine: Codable {
+    var medicineName: String
+    var medicineHour: String
 }

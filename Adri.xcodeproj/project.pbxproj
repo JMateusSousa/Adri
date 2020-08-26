@@ -14,6 +14,8 @@
 		7C22642D24E58B23001F6A03 /* AdriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C22642C24E58B23001F6A03 /* AdriTests.swift */; };
 		7C22643824E58B23001F6A03 /* AdriUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C22643724E58B23001F6A03 /* AdriUITests.swift */; };
 		7C22644924E58CEE001F6A03 /* AddMedicine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C22644824E58CEE001F6A03 /* AddMedicine.storyboard */; };
+		7C2AC21E24F3F78A006C4DC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2AC21D24F3F78A006C4DC3 /* LaunchScreen.storyboard */; };
+		7C34889224F5FE43005162E5 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C34889124F5FE43005162E5 /* UserDefaultsExtension.swift */; };
 		7C88061E24ED5A6B00C2C808 /* AddMedicineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C88061D24ED5A6B00C2C808 /* AddMedicineController.swift */; };
 		7C88062024ED67EC00C2C808 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C88061F24ED67EC00C2C808 /* Medicine.swift */; };
 		7C967A1124EB86E100CED81E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C967A1024EB86E100CED81E /* TableViewCell.swift */; };
@@ -53,6 +55,8 @@
 		7C22643724E58B23001F6A03 /* AdriUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdriUITests.swift; sourceTree = "<group>"; };
 		7C22643924E58B23001F6A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C22644824E58CEE001F6A03 /* AddMedicine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMedicine.storyboard; sourceTree = "<group>"; };
+		7C2AC21D24F3F78A006C4DC3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7C34889124F5FE43005162E5 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		7C88061D24ED5A6B00C2C808 /* AddMedicineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineController.swift; sourceTree = "<group>"; };
 		7C88061F24ED67EC00C2C808 /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
 		7C967A1024EB86E100CED81E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 		7C22641424E58B21001F6A03 /* Adri */ = {
 			isa = PBXGroup;
 			children = (
+				7C34889024F5FE19005162E5 /* Extension */,
 				7C22644724E58C53001F6A03 /* Model */,
 				7C22644624E58C48001F6A03 /* View */,
 				7C22644524E58C3C001F6A03 /* Controller */,
@@ -155,6 +160,7 @@
 				7CA2514424E6CB7F008109F2 /* MainScreen.storyboard */,
 				7CA2514624E6D1B6008109F2 /* InfoScreen.storyboard */,
 				7C967A1024EB86E100CED81E /* TableViewCell.swift */,
+				7C2AC21D24F3F78A006C4DC3 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +171,14 @@
 				7C88061F24ED67EC00C2C808 /* Medicine.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7C34889024F5FE19005162E5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7C34889124F5FE43005162E5 /* UserDefaultsExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +289,7 @@
 				7C22644924E58CEE001F6A03 /* AddMedicine.storyboard in Resources */,
 				7CA2514524E6CB7F008109F2 /* MainScreen.storyboard in Resources */,
 				7CA2514324E6C89C008109F2 /* TabBar.storyboard in Resources */,
+				7C2AC21E24F3F78A006C4DC3 /* LaunchScreen.storyboard in Resources */,
 				7CA2514724E6D1B6008109F2 /* InfoScreen.storyboard in Resources */,
 				7C22641F24E58B23001F6A03 /* Assets.xcassets in Resources */,
 			);
@@ -326,6 +341,7 @@
 				7C967A1124EB86E100CED81E /* TableViewCell.swift in Sources */,
 				7C88061E24ED5A6B00C2C808 /* AddMedicineController.swift in Sources */,
 				7C22641624E58B21001F6A03 /* AppDelegate.swift in Sources */,
+				7C34889224F5FE43005162E5 /* UserDefaultsExtension.swift in Sources */,
 				7C22641824E58B21001F6A03 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
