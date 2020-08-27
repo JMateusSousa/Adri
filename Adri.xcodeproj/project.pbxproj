@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		7C22641624E58B21001F6A03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C22641524E58B21001F6A03 /* AppDelegate.swift */; };
 		7C22641824E58B21001F6A03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C22641724E58B21001F6A03 /* SceneDelegate.swift */; };
-		7C22641A24E58B21001F6A03 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C22641924E58B21001F6A03 /* MainScreenController.swift */; };
 		7C22641F24E58B23001F6A03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C22641E24E58B23001F6A03 /* Assets.xcassets */; };
 		7C22642D24E58B23001F6A03 /* AdriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C22642C24E58B23001F6A03 /* AdriTests.swift */; };
 		7C22643824E58B23001F6A03 /* AdriUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C22643724E58B23001F6A03 /* AdriUITests.swift */; };
 		7C22644924E58CEE001F6A03 /* AddMedicine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C22644824E58CEE001F6A03 /* AddMedicine.storyboard */; };
 		7C2AC21E24F3F78A006C4DC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2AC21D24F3F78A006C4DC3 /* LaunchScreen.storyboard */; };
+		7C2FC5AC24F69169007E6EA2 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2FC5AB24F69169007E6EA2 /* DataBase.swift */; };
 		7C34889224F5FE43005162E5 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C34889124F5FE43005162E5 /* UserDefaultsExtension.swift */; };
-		7C88061E24ED5A6B00C2C808 /* AddMedicineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C88061D24ED5A6B00C2C808 /* AddMedicineController.swift */; };
 		7C88062024ED67EC00C2C808 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C88061F24ED67EC00C2C808 /* Medicine.swift */; };
 		7C967A1124EB86E100CED81E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C967A1024EB86E100CED81E /* TableViewCell.swift */; };
 		7CA2514324E6C89C008109F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA2514224E6C89C008109F2 /* TabBar.storyboard */; };
@@ -45,7 +44,6 @@
 		7C22641224E58B21001F6A03 /* Adri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C22641524E58B21001F6A03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C22641724E58B21001F6A03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7C22641924E58B21001F6A03 /* MainScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
 		7C22641E24E58B23001F6A03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C22642324E58B23001F6A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C22642824E58B23001F6A03 /* AdriTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdriTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,8 +54,8 @@
 		7C22643924E58B23001F6A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C22644824E58CEE001F6A03 /* AddMedicine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMedicine.storyboard; sourceTree = "<group>"; };
 		7C2AC21D24F3F78A006C4DC3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7C2FC5AB24F69169007E6EA2 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		7C34889124F5FE43005162E5 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
-		7C88061D24ED5A6B00C2C808 /* AddMedicineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineController.swift; sourceTree = "<group>"; };
 		7C88061F24ED67EC00C2C808 /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
 		7C967A1024EB86E100CED81E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		7CA2514224E6C89C008109F2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
@@ -113,12 +111,12 @@
 		7C22641424E58B21001F6A03 /* Adri */ = {
 			isa = PBXGroup;
 			children = (
+				7C28C68424F7D5C90009135A /* Setting */,
+				7C2FC5AA24F6912C007E6EA2 /* Utility */,
 				7C34889024F5FE19005162E5 /* Extension */,
 				7C22644724E58C53001F6A03 /* Model */,
 				7C22644624E58C48001F6A03 /* View */,
 				7C22644524E58C3C001F6A03 /* Controller */,
-				7C22641524E58B21001F6A03 /* AppDelegate.swift */,
-				7C22641724E58B21001F6A03 /* SceneDelegate.swift */,
 				7C22641E24E58B23001F6A03 /* Assets.xcassets */,
 				7C22642324E58B23001F6A03 /* Info.plist */,
 			);
@@ -146,8 +144,6 @@
 		7C22644524E58C3C001F6A03 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7C22641924E58B21001F6A03 /* MainScreenController.swift */,
-				7C88061D24ED5A6B00C2C808 /* AddMedicineController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -171,6 +167,23 @@
 				7C88061F24ED67EC00C2C808 /* Medicine.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7C28C68424F7D5C90009135A /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				7C22641724E58B21001F6A03 /* SceneDelegate.swift */,
+				7C22641524E58B21001F6A03 /* AppDelegate.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		7C2FC5AA24F6912C007E6EA2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				7C2FC5AB24F69169007E6EA2 /* DataBase.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		7C34889024F5FE19005162E5 /* Extension */ = {
@@ -336,12 +349,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C22641A24E58B21001F6A03 /* MainScreenController.swift in Sources */,
 				7C88062024ED67EC00C2C808 /* Medicine.swift in Sources */,
 				7C967A1124EB86E100CED81E /* TableViewCell.swift in Sources */,
-				7C88061E24ED5A6B00C2C808 /* AddMedicineController.swift in Sources */,
 				7C22641624E58B21001F6A03 /* AppDelegate.swift in Sources */,
 				7C34889224F5FE43005162E5 /* UserDefaultsExtension.swift in Sources */,
+				7C2FC5AC24F69169007E6EA2 /* DataBase.swift in Sources */,
 				7C22641824E58B21001F6A03 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

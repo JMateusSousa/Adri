@@ -17,17 +17,26 @@ class MainScreenController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Coloca userDefaults no array de medicamentos
-        do {
-            let index = AddMedicineController.memory.integer(forKey: "indexMedicineDay")
-            for item in 0...index {
-                try MainScreenController.self.medicines.append(AddMedicineController.memory.getObject(forKey: String(item) + "25/08", castTo: Medicine.self))
-            }
-        } catch {
-            print(error.localizedDescription)
-        }
+//        do {
+//            let index = AddMedicineController.memory.integer(forKey: "indexMedicineDay")
+//            for item in 0...index {
+//                try MainScreenController.self.medicines.append(AddMedicineController.memory.getObject(forKey: String(item) + "25/08", castTo: Medicine.self))
+//            }
+//        } catch {
+//            print(error.localizedDescription)
+//        }
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellIdentifier")
         tableView.delegate = self
         tableView.dataSource = self
+        
+//        let database = DataBase()
+//        let medicines = [Medicine(medicineName: "Tylenol", medicineHour: "2\n5\n9"), Medicine(medicineName: "Dipirona", medicineHour: "18")]
+//        var savedMedicines = database.load()
+//        savedMedicines += medicines
+//        database.save(medicines: savedMedicines)
+        
+        let database = DataBase()
+        MainScreenController.medicines = database.load()
     }
     
     override func viewWillAppear(_ animated: Bool) {

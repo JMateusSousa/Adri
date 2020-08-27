@@ -69,10 +69,13 @@ class AddMedicineController: UIViewController {
         let newMedicine = Medicine(medicineName: medicineTextField.text!, medicineHour: medicineHours)
         MainScreenController.medicines.append(newMedicine)
         do {
-            try AddMedicineController.memory.setObject(newMedicine, forKey: String(indexMedicineDay) + "25/08")
-            AddMedicineController.memory.set(indexMedicineDay, forKey: "indexMedicineDay")
-            indexMedicineDay = 1 + indexMedicineDay
-            print(indexMedicineDay)
+            var medicines = DataBase().load()
+            medicines.append(newMedicine)
+            DataBase().save(medicines: medicines)
+//            try AddMedicineController.memory.setObject(newMedicine, forKey: String(indexMedicineDay) + "25/08")
+//            AddMedicineController.memory.set(indexMedicineDay, forKey: "indexMedicineDay")
+//            indexMedicineDay = 1 + indexMedicineDay
+//            print(indexMedicineDay)
         } catch {
             print(error.localizedDescription)
         }
