@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r78-Ws-GJd">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SavedMedicineViewController-->
+        <scene sceneID="RDa-Lj-Yrv">
+            <objects>
+                <viewController storyboardIdentifier="SavedMedicine" title="SavedMedicineViewController" id="r78-Ws-GJd" customClass="SavedMedicineViewController" customModule="Adri" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hhi-WN-pqh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="ul8-W5-6s0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.36470588240000001" green="0.42352941179999998" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.36470588240000001" green="0.42352941179999998" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="7TW-Ft-xC4">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" style="done" id="2rE-3D-pA5">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rKC-e8-3bm">
+                                                <rect key="frame" x="20" y="11" width="14.666666666666664" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="default"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="backButton:" destination="r78-Ws-GJd" eventType="touchUpInside" id="8p1-oI-slZ"/>
+                                                </connections>
+                                            </button>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indicação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24O-wb-Kb9">
+                                <rect key="frame" x="20" y="72" width="81" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="0.33776184920000002" green="0.36179712409999998" blue="0.87455564740000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraindicação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsp-vQ-hZZ">
+                                <rect key="frame" x="20" y="377" width="138" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="0.33776184920000002" green="0.36179712409999998" blue="0.87455564740000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHl-R7-9ZL" userLabel="Text View 1">
+                                <rect key="frame" x="8" y="102" width="398" height="267"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzG-xH-bGe" userLabel="Text View 2">
+                                <rect key="frame" x="8" y="407" width="398" height="309"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="309" id="b5m-32-oWi"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UJa-9t-UJm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zzG-xH-bGe" firstAttribute="leading" secondItem="UJa-9t-UJm" secondAttribute="leading" constant="8" id="BAO-JV-vwF"/>
+                            <constraint firstItem="ul8-W5-6s0" firstAttribute="trailing" secondItem="UJa-9t-UJm" secondAttribute="trailing" id="KMr-Ih-X8d"/>
+                            <constraint firstItem="UJa-9t-UJm" firstAttribute="bottom" secondItem="zzG-xH-bGe" secondAttribute="bottom" constant="20" id="SE3-gO-FT1"/>
+                            <constraint firstItem="zzG-xH-bGe" firstAttribute="top" secondItem="rsp-vQ-hZZ" secondAttribute="bottom" constant="8" id="Tkt-YQ-sng"/>
+                            <constraint firstItem="zzG-xH-bGe" firstAttribute="trailing" secondItem="yHl-R7-9ZL" secondAttribute="trailing" id="WUn-KK-npl"/>
+                            <constraint firstItem="rsp-vQ-hZZ" firstAttribute="top" secondItem="yHl-R7-9ZL" secondAttribute="bottom" constant="8" id="auC-wv-HGX"/>
+                            <constraint firstItem="yHl-R7-9ZL" firstAttribute="top" secondItem="24O-wb-Kb9" secondAttribute="bottom" constant="8" id="cKh-l1-FL7"/>
+                            <constraint firstItem="ul8-W5-6s0" firstAttribute="leading" secondItem="UJa-9t-UJm" secondAttribute="leading" id="hB1-z8-BI0"/>
+                            <constraint firstItem="24O-wb-Kb9" firstAttribute="top" secondItem="ul8-W5-6s0" secondAttribute="bottom" constant="28" id="kbH-sf-J99"/>
+                            <constraint firstItem="24O-wb-Kb9" firstAttribute="leading" secondItem="hhi-WN-pqh" secondAttribute="leadingMargin" id="pFo-5Y-28Y"/>
+                            <constraint firstItem="24O-wb-Kb9" firstAttribute="leading" secondItem="rsp-vQ-hZZ" secondAttribute="leading" id="qVU-Ez-JN4"/>
+                            <constraint firstItem="zzG-xH-bGe" firstAttribute="leading" secondItem="yHl-R7-9ZL" secondAttribute="leading" id="vvW-Pc-Z2T"/>
+                            <constraint firstItem="ul8-W5-6s0" firstAttribute="top" secondItem="UJa-9t-UJm" secondAttribute="top" id="ydg-aj-Ua2"/>
+                            <constraint firstItem="zzG-xH-bGe" firstAttribute="centerX" secondItem="ul8-W5-6s0" secondAttribute="centerX" id="zma-eV-NUX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navBar" destination="ul8-W5-6s0" id="Vby-mV-8wE"/>
+                        <outlet property="textViewContraindicantion" destination="zzG-xH-bGe" id="JPh-O8-hXh"/>
+                        <outlet property="textViewIndicantion" destination="yHl-R7-9ZL" id="9eA-L8-a3k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHN-zl-Qi3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66.666666666666671" y="75.815217391304358"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ST4-Pe-lGx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ST4-Pe-lGx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="3eI-Oq-ckO">
             <objects>
-                <tabBarController id="ST4-Pe-lGx" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbar" id="ST4-Pe-lGx" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c2a-Fm-s2E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -19,7 +20,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="llM-va-cOI" kind="relationship" relationship="viewControllers" id="jAc-0i-cZj"/>
-                        <segue destination="IRn-Na-6rc" kind="relationship" relationship="viewControllers" id="zyJ-Kj-Axe"/>
                         <segue destination="wpT-bC-ODT" kind="relationship" relationship="viewControllers" id="52M-gp-Mfu"/>
                     </connections>
                 </tabBarController>
@@ -46,16 +46,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDw-7f-LH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-535" y="335"/>
-        </scene>
-        <!--AddMedicine-->
-        <scene sceneID="OCs-b7-e93">
-            <objects>
-                <viewControllerPlaceholder storyboardName="AddMedicine" id="IRn-Na-6rc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mEf-EY-KfH"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cq1-nJ-0pN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-764" y="335"/>
         </scene>
     </scenes>
 </document>
