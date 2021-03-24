@@ -15,9 +15,9 @@
 		7C2AC21E24F3F78A006C4DC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2AC21D24F3F78A006C4DC3 /* LaunchScreen.storyboard */; };
 		7C2F6FBF25D0414100CA5863 /* SearchMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F6FBE25D0414100CA5863 /* SearchMedicineViewController.swift */; };
 		7C4B339A253B7D1D001BFEC6 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B3398253B7D1D001BFEC6 /* MainScreenController.swift */; };
+		7C55CD8E260BB83800C0E76D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55CD8D260BB83800C0E76D /* TableViewCell.swift */; };
 		7C5B7A8425CC341800B9D5F2 /* SavedMedicine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5B7A8325CC341800B9D5F2 /* SavedMedicine.storyboard */; };
 		7C5B7A8925CC42DA00B9D5F2 /* SavedMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B7A8825CC42DA00B9D5F2 /* SavedMedicineViewController.swift */; };
-		7C60C7B425D40FD8007DF37C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C60C7B325D40FD8007DF37C /* TableViewCell.swift */; };
 		7C83883E25D17ED300CB280F /* Medicines.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C83883C25D17ED300CB280F /* Medicines.xcdatamodeld */; };
 		7CA2514324E6C89C008109F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA2514224E6C89C008109F2 /* TabBar.storyboard */; };
 		7CA2514524E6CB7F008109F2 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA2514424E6CB7F008109F2 /* MainScreen.storyboard */; };
@@ -57,9 +57,9 @@
 		7C2AC21D24F3F78A006C4DC3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C2F6FBE25D0414100CA5863 /* SearchMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMedicineViewController.swift; sourceTree = "<group>"; };
 		7C4B3398253B7D1D001BFEC6 /* MainScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
+		7C55CD8D260BB83800C0E76D /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../../../../../../../../.Trash/TableViewCell.swift; sourceTree = "<group>"; };
 		7C5B7A8325CC341800B9D5F2 /* SavedMedicine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedMedicine.storyboard; sourceTree = "<group>"; };
 		7C5B7A8825CC42DA00B9D5F2 /* SavedMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMedicineViewController.swift; sourceTree = "<group>"; };
-		7C60C7B325D40FD8007DF37C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../../../../../../../../Desktop/TableViewCell.swift; sourceTree = "<group>"; };
 		7C83883D25D17ED300CB280F /* Medicines.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medicines.xcdatamodel; sourceTree = "<group>"; };
 		7CA2514224E6C89C008109F2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		7CA2514424E6CB7F008109F2 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
@@ -115,6 +115,8 @@
 		7C22641424E58B21001F6A03 /* Adri */ = {
 			isa = PBXGroup;
 			children = (
+				7C6AFAD325DD66CB007E14A0 /* Model */,
+				7C6AFAD225DD66BD007E14A0 /* ViewModel */,
 				7C83883C25D17ED300CB280F /* Medicines.xcdatamodeld */,
 				7C28C68424F7D5C90009135A /* Setting */,
 				7C22644624E58C48001F6A03 /* View */,
@@ -157,7 +159,7 @@
 		7C22644624E58C48001F6A03 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7C60C7B325D40FD8007DF37C /* TableViewCell.swift */,
+				7C55CD8D260BB83800C0E76D /* TableViewCell.swift */,
 				7CA2514224E6C89C008109F2 /* TabBar.storyboard */,
 				7CA2514424E6CB7F008109F2 /* MainScreen.storyboard */,
 				7CA2514624E6D1B6008109F2 /* InfoScreen.storyboard */,
@@ -174,6 +176,20 @@
 				7C22641524E58B21001F6A03 /* AppDelegate.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		7C6AFAD225DD66BD007E14A0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7C6AFAD325DD66CB007E14A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,11 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C22641624E58B21001F6A03 /* AppDelegate.swift in Sources */,
+				7C55CD8E260BB83800C0E76D /* TableViewCell.swift in Sources */,
 				7C83883E25D17ED300CB280F /* Medicines.xcdatamodeld in Sources */,
 				7C5B7A8925CC42DA00B9D5F2 /* SavedMedicineViewController.swift in Sources */,
 				7C2F6FBF25D0414100CA5863 /* SearchMedicineViewController.swift in Sources */,
 				7C4B339A253B7D1D001BFEC6 /* MainScreenController.swift in Sources */,
-				7C60C7B425D40FD8007DF37C /* TableViewCell.swift in Sources */,
 				7C22641824E58B21001F6A03 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
