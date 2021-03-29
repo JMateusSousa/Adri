@@ -19,7 +19,6 @@ class MainScreenController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellIdentifier")
         tableView.delegate = self
         tableView.dataSource = self
