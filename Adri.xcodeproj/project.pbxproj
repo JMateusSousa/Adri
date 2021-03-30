@@ -15,6 +15,9 @@
 		7C2AC21E24F3F78A006C4DC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C2AC21D24F3F78A006C4DC3 /* LaunchScreen.storyboard */; };
 		7C2F6FBF25D0414100CA5863 /* SearchMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2F6FBE25D0414100CA5863 /* SearchMedicineViewController.swift */; };
 		7C4B339A253B7D1D001BFEC6 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B3398253B7D1D001BFEC6 /* MainScreenController.swift */; };
+		7C4CD88326129192002E434B /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4CD88226129192002E434B /* Http.swift */; };
+		7C4CD888261291AA002E434B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4CD887261291AA002E434B /* Router.swift */; };
+		7C4CD88D26129255002E434B /* APIRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4CD88C26129255002E434B /* APIRouters.swift */; };
 		7C55CD8E260BB83800C0E76D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55CD8D260BB83800C0E76D /* TableViewCell.swift */; };
 		7C5B7A8425CC341800B9D5F2 /* SavedMedicine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5B7A8325CC341800B9D5F2 /* SavedMedicine.storyboard */; };
 		7C5B7A8925CC42DA00B9D5F2 /* SavedMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B7A8825CC42DA00B9D5F2 /* SavedMedicineViewController.swift */; };
@@ -57,6 +60,9 @@
 		7C2AC21D24F3F78A006C4DC3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C2F6FBE25D0414100CA5863 /* SearchMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMedicineViewController.swift; sourceTree = "<group>"; };
 		7C4B3398253B7D1D001BFEC6 /* MainScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
+		7C4CD88226129192002E434B /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		7C4CD887261291AA002E434B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		7C4CD88C26129255002E434B /* APIRouters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouters.swift; sourceTree = "<group>"; };
 		7C55CD8D260BB83800C0E76D /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../../../../../../../../.Trash/TableViewCell.swift; sourceTree = "<group>"; };
 		7C5B7A8325CC341800B9D5F2 /* SavedMedicine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedMedicine.storyboard; sourceTree = "<group>"; };
 		7C5B7A8825CC42DA00B9D5F2 /* SavedMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMedicineViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 		7C22641424E58B21001F6A03 /* Adri */ = {
 			isa = PBXGroup;
 			children = (
+				7C4CD8812612916F002E434B /* Networking */,
 				7C6AFAD325DD66CB007E14A0 /* Model */,
 				7C6AFAD225DD66BD007E14A0 /* ViewModel */,
 				7C83883C25D17ED300CB280F /* Medicines.xcdatamodeld */,
@@ -176,6 +183,16 @@
 				7C22641524E58B21001F6A03 /* AppDelegate.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		7C4CD8812612916F002E434B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7C4CD88226129192002E434B /* Http.swift */,
+				7C4CD887261291AA002E434B /* Router.swift */,
+				7C4CD88C26129255002E434B /* APIRouters.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		7C6AFAD225DD66BD007E14A0 /* ViewModel */ = {
@@ -256,7 +273,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "José Mateus Azevedo";
 				TargetAttributes = {
 					7C22641124E58B21001F6A03 = {
@@ -348,10 +365,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C22641624E58B21001F6A03 /* AppDelegate.swift in Sources */,
+				7C4CD88D26129255002E434B /* APIRouters.swift in Sources */,
 				7C55CD8E260BB83800C0E76D /* TableViewCell.swift in Sources */,
 				7C83883E25D17ED300CB280F /* Medicines.xcdatamodeld in Sources */,
 				7C5B7A8925CC42DA00B9D5F2 /* SavedMedicineViewController.swift in Sources */,
+				7C4CD888261291AA002E434B /* Router.swift in Sources */,
 				7C2F6FBF25D0414100CA5863 /* SearchMedicineViewController.swift in Sources */,
+				7C4CD88326129192002E434B /* Http.swift in Sources */,
 				7C4B339A253B7D1D001BFEC6 /* MainScreenController.swift in Sources */,
 				7C22641824E58B21001F6A03 /* SceneDelegate.swift in Sources */,
 			);
@@ -416,6 +436,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -440,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -476,6 +497,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -494,7 +516,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

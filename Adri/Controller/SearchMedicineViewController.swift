@@ -25,31 +25,36 @@ class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let medicine = searchBar.text!.lowercased()
         view.endEditing(true)
-        let path = "https://api.fda.gov/drug/label.json?search=indications_and_usage:\(String(describing: medicine))"
-        let urlFromString: URL? = URL(string: path)
+        setInformations(medicine: medicine)
+    }
 
-        guard let url = urlFromString else { fatalError("URL invalida") }
+    func setInformations(medicine: String) {
+        let url = APIRouters.search.urlMedicine(medicine: medicine)
+        HTTP.get.request(url: url) {  data, response, errorMessage in
 
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+            if let errorMessage = errorMessage {
+                print(errorMessage)
+                return
+            }
 
-            if let data = data,
-               let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                if let result = json["results"] as? [[String: Any]] {
+            guard let data = data, let response = response else {
+                return
+            }
 
-                    let indications = result[0]["indications_and_usage"] as? [String]
-                    let contraindications = result[0]["contraindications"] as? [String]
+            if response.statusCode == 200 {
+                let informations = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                if let results = informations?["results"] as? [[String: Any]] {
+                    let indications = results[0]["indications_and_usage"] as? [String]
+                    let contraindications = results[0]["contraindications"] as? [String]
                     let textOne = indications!.joined(separator:"-")
                     let textTwo = contraindications!.joined(separator:"-")
-
                     DispatchQueue.main.async {
                         self.textViewIndication.text = textOne
                         self.textViewContraindication.text = textTwo
                     }
                 }
             }
-        })
-
-        task.resume()
+        }
     }
 
     @IBAction func saveButton(_ sender: Any) {
