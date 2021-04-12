@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,14 +18,15 @@
 		7C4CD88326129192002E434B /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4CD88226129192002E434B /* Http.swift */; };
 		7C4CD888261291AA002E434B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4CD887261291AA002E434B /* Router.swift */; };
 		7C4CD88D26129255002E434B /* APIRouters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4CD88C26129255002E434B /* APIRouters.swift */; };
-		7C55CD8E260BB83800C0E76D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C55CD8D260BB83800C0E76D /* TableViewCell.swift */; };
 		7C5B7A8425CC341800B9D5F2 /* SavedMedicine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5B7A8325CC341800B9D5F2 /* SavedMedicine.storyboard */; };
 		7C5B7A8925CC42DA00B9D5F2 /* SavedMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5B7A8825CC42DA00B9D5F2 /* SavedMedicineViewController.swift */; };
 		7C83883E25D17ED300CB280F /* Medicines.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C83883C25D17ED300CB280F /* Medicines.xcdatamodeld */; };
+		7C8C14A32624726900B613D2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8C14A22624726900B613D2 /* TableViewCell.swift */; };
 		7CA2514324E6C89C008109F2 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA2514224E6C89C008109F2 /* TabBar.storyboard */; };
 		7CA2514524E6CB7F008109F2 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA2514424E6CB7F008109F2 /* MainScreen.storyboard */; };
 		7CA2514724E6D1B6008109F2 /* InfoScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA2514624E6D1B6008109F2 /* InfoScreen.storyboard */; };
 		7CEC97F025D572C60085DA8B /* SavedMedicineViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEC97EF25D572C60085DA8B /* SavedMedicineViewControllerTests.swift */; };
+		86E511F70CE4249947A0C697 /* Pods_Adri.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D451A841642BEC6B3FCB1E /* Pods_Adri.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,14 +64,17 @@
 		7C4CD88226129192002E434B /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		7C4CD887261291AA002E434B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		7C4CD88C26129255002E434B /* APIRouters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouters.swift; sourceTree = "<group>"; };
-		7C55CD8D260BB83800C0E76D /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../../../../../../../../.Trash/TableViewCell.swift; sourceTree = "<group>"; };
 		7C5B7A8325CC341800B9D5F2 /* SavedMedicine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedMedicine.storyboard; sourceTree = "<group>"; };
 		7C5B7A8825CC42DA00B9D5F2 /* SavedMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMedicineViewController.swift; sourceTree = "<group>"; };
 		7C83883D25D17ED300CB280F /* Medicines.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medicines.xcdatamodel; sourceTree = "<group>"; };
+		7C8C14A22624726900B613D2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		7CA2514224E6C89C008109F2 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		7CA2514424E6CB7F008109F2 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 		7CA2514624E6D1B6008109F2 /* InfoScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoScreen.storyboard; sourceTree = "<group>"; };
 		7CEC97EF25D572C60085DA8B /* SavedMedicineViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedMedicineViewControllerTests.swift; sourceTree = "<group>"; };
+		7D3CDD5C816CB13A65EFA2EE /* Pods-Adri.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adri.release.xcconfig"; path = "Target Support Files/Pods-Adri/Pods-Adri.release.xcconfig"; sourceTree = "<group>"; };
+		B9064B7844E66723A38562A4 /* Pods-Adri.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Adri.debug.xcconfig"; path = "Target Support Files/Pods-Adri/Pods-Adri.debug.xcconfig"; sourceTree = "<group>"; };
+		E8D451A841642BEC6B3FCB1E /* Pods_Adri.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Adri.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E511F70CE4249947A0C697 /* Pods_Adri.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		345809993281F5DF3E414DD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8D451A841642BEC6B3FCB1E /* Pods_Adri.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7C22640924E58B21001F6A03 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +118,8 @@
 				7C22642B24E58B23001F6A03 /* AdriTests */,
 				7C22643624E58B23001F6A03 /* AdriUITests */,
 				7C22641324E58B21001F6A03 /* Products */,
+				A314F3FEBEFC0922E38B0459 /* Pods */,
+				345809993281F5DF3E414DD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,12 +181,12 @@
 		7C22644624E58C48001F6A03 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7C55CD8D260BB83800C0E76D /* TableViewCell.swift */,
 				7CA2514224E6C89C008109F2 /* TabBar.storyboard */,
 				7CA2514424E6CB7F008109F2 /* MainScreen.storyboard */,
 				7CA2514624E6D1B6008109F2 /* InfoScreen.storyboard */,
 				7C2AC21D24F3F78A006C4DC3 /* LaunchScreen.storyboard */,
 				7C5B7A8325CC341800B9D5F2 /* SavedMedicine.storyboard */,
+				7C8C14A22624726900B613D2 /* TableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,6 +224,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		A314F3FEBEFC0922E38B0459 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9064B7844E66723A38562A4 /* Pods-Adri.debug.xcconfig */,
+				7D3CDD5C816CB13A65EFA2EE /* Pods-Adri.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,10 +240,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C22643C24E58B23001F6A03 /* Build configuration list for PBXNativeTarget "Adri" */;
 			buildPhases = (
+				EEFE085A15452BE0B18278B3 /* [CP] Check Pods Manifest.lock */,
 				7C22640E24E58B21001F6A03 /* Sources */,
 				7C22640F24E58B21001F6A03 /* Frameworks */,
 				7C22641024E58B21001F6A03 /* Resources */,
 				7C90E3EC24EAB7A90086B6BD /* ShellScript */,
+				7E0039BA7D8D41DBD5C4503B /* [CP] Embed Pods Frameworks */,
+				B0234916161C19DFD61D39EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -357,6 +384,62 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		7E0039BA7D8D41DBD5C4503B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adri/Pods-Adri-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adri/Pods-Adri-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Adri/Pods-Adri-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0234916161C19DFD61D39EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adri/Pods-Adri-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Adri/Pods-Adri-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Adri/Pods-Adri-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEFE085A15452BE0B18278B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Adri-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -366,10 +449,10 @@
 			files = (
 				7C22641624E58B21001F6A03 /* AppDelegate.swift in Sources */,
 				7C4CD88D26129255002E434B /* APIRouters.swift in Sources */,
-				7C55CD8E260BB83800C0E76D /* TableViewCell.swift in Sources */,
 				7C83883E25D17ED300CB280F /* Medicines.xcdatamodeld in Sources */,
 				7C5B7A8925CC42DA00B9D5F2 /* SavedMedicineViewController.swift in Sources */,
 				7C4CD888261291AA002E434B /* Router.swift in Sources */,
+				7C8C14A32624726900B613D2 /* TableViewCell.swift in Sources */,
 				7C2F6FBF25D0414100CA5863 /* SearchMedicineViewController.swift in Sources */,
 				7C4CD88326129192002E434B /* Http.swift in Sources */,
 				7C4B339A253B7D1D001BFEC6 /* MainScreenController.swift in Sources */,
@@ -528,6 +611,7 @@
 		};
 		7C22643D24E58B23001F6A03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9064B7844E66723A38562A4 /* Pods-Adri.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -550,6 +634,7 @@
 		};
 		7C22643E24E58B23001F6A03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D3CDD5C816CB13A65EFA2EE /* Pods-Adri.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
