@@ -10,18 +10,27 @@ import UIKit
 
 class SavedMedicineViewController: UIViewController {
 
-    @IBOutlet weak var textViewIndicantion: UITextView!
-    @IBOutlet weak var textViewContraindicantion: UITextView!
-
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var segmentControlText: UITextView!
     @IBOutlet weak var navBar: UINavigationBar!
 
     var textOne, textTwo, name: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        textViewIndicantion.text = textOne
-        textViewContraindicantion.text = textTwo
+        segmentControlText.text = textOne
         navBar.topItem?.title = name
+    }
+
+    @IBAction func selectSegment(_ sender: UISegmentedControl) {
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            segmentControlText.text = self.textOne
+        case 1:
+            segmentControlText.text = self.textTwo
+        default:
+            break
+        }
     }
 
     @IBAction func backButton(_ sender: UIButton) {

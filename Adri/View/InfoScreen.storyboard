@@ -51,38 +51,6 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indicação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6L8-OX-wkF">
-                                <rect key="frame" x="20" y="227" width="81" height="22"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="textColor" red="0.33776184920000002" green="0.36179712409999998" blue="0.87455564740000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraindicação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8p-GO-YYU">
-                                <rect key="frame" x="20" y="433" width="138" height="22"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="textColor" red="0.33776184920000002" green="0.36179712409999998" blue="0.87455564740000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKP-G6-nSZ" userLabel="Text View 1">
-                                <rect key="frame" x="8" y="257" width="398" height="162"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" priority="250" constant="162" id="CwR-dF-GLg"/>
-                                </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-08-RvM" userLabel="Text View 2">
-                                <rect key="frame" x="8" y="463" width="398" height="161"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="250" constant="161" id="ZOg-nG-B6e"/>
-                                </constraints>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqu-ke-L1u">
                                 <rect key="frame" x="122" y="632" width="171" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -99,37 +67,52 @@
                                     <action selector="saveButton:" destination="dkg-As-fdG" eventType="touchUpInside" id="hXq-er-XSS"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cid-bx-qjB">
+                                <rect key="frame" x="20" y="213" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Indicação"/>
+                                    <segment title="Contraindicação"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.33776184920000002" green="0.36179712409999998" blue="0.87455564740000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="selectSegment:" destination="dkg-As-fdG" eventType="valueChanged" id="tF4-qR-XAt"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Ex-os-AAm">
+                                <rect key="frame" x="20" y="265" width="374" height="359"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YCk-Lc-Brc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hXm-A9-DuM" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" id="0NO-6M-b4h"/>
-                            <constraint firstItem="YCk-Lc-Brc" firstAttribute="trailing" secondItem="eKP-G6-nSZ" secondAttribute="trailing" constant="8" id="218-4U-Smv"/>
                             <constraint firstItem="Lqu-ke-L1u" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" constant="122" id="3Cp-oL-fo0"/>
-                            <constraint firstItem="C8p-GO-YYU" firstAttribute="top" secondItem="eKP-G6-nSZ" secondAttribute="bottom" constant="14" id="4QP-Ka-UMq"/>
+                            <constraint firstItem="Lqu-ke-L1u" firstAttribute="top" secondItem="7Ex-os-AAm" secondAttribute="bottom" constant="8" symbolic="YES" id="4nD-dG-gyO"/>
                             <constraint firstItem="YCk-Lc-Brc" firstAttribute="bottom" secondItem="Lqu-ke-L1u" secondAttribute="bottom" constant="5" id="4zH-Ww-lkI"/>
                             <constraint firstItem="hXm-A9-DuM" firstAttribute="top" secondItem="YCk-Lc-Brc" secondAttribute="top" id="6lE-Mj-LdO"/>
-                            <constraint firstItem="YCk-Lc-Brc" firstAttribute="trailing" secondItem="8XJ-08-RvM" secondAttribute="trailing" constant="8" id="8Z2-w5-84S"/>
-                            <constraint firstItem="6L8-OX-wkF" firstAttribute="top" secondItem="fcE-vN-epg" secondAttribute="bottom" constant="23" id="B0V-Nd-WUj"/>
-                            <constraint firstItem="Lqu-ke-L1u" firstAttribute="top" secondItem="8XJ-08-RvM" secondAttribute="bottom" priority="250" constant="8" id="LXy-Dd-Jet"/>
+                            <constraint firstItem="7Ex-os-AAm" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" constant="20" id="Lgy-FY-hV2"/>
                             <constraint firstItem="fcE-vN-epg" firstAttribute="trailing" secondItem="YCk-Lc-Brc" secondAttribute="trailing" id="MOQ-5F-DYf"/>
                             <constraint firstItem="fcE-vN-epg" firstAttribute="top" secondItem="hXm-A9-DuM" secondAttribute="bottom" constant="24" id="NPB-2k-USy"/>
-                            <constraint firstItem="eKP-G6-nSZ" firstAttribute="top" secondItem="6L8-OX-wkF" secondAttribute="bottom" constant="8" id="QXc-rL-TRk"/>
-                            <constraint firstItem="8XJ-08-RvM" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" constant="8" id="dqm-Be-IIg"/>
-                            <constraint firstItem="8XJ-08-RvM" firstAttribute="top" secondItem="C8p-GO-YYU" secondAttribute="bottom" constant="8" id="ehh-XD-4GT"/>
-                            <constraint firstItem="6L8-OX-wkF" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" constant="20" id="fYb-lK-wc5"/>
+                            <constraint firstItem="cid-bx-qjB" firstAttribute="centerX" secondItem="YCk-Lc-Brc" secondAttribute="centerX" id="X5A-Im-c0x"/>
+                            <constraint firstItem="YCk-Lc-Brc" firstAttribute="trailing" secondItem="7Ex-os-AAm" secondAttribute="trailing" constant="20" id="fV0-9p-iuP"/>
                             <constraint firstItem="YCk-Lc-Brc" firstAttribute="trailing" secondItem="Lqu-ke-L1u" secondAttribute="trailing" constant="121" id="iGA-oK-6lc"/>
-                            <constraint firstItem="eKP-G6-nSZ" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" constant="8" id="oJb-df-tPl"/>
+                            <constraint firstItem="cid-bx-qjB" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" constant="20" id="mUV-WY-c24"/>
                             <constraint firstItem="fcE-vN-epg" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" id="pHI-33-eIA"/>
+                            <constraint firstItem="YCk-Lc-Brc" firstAttribute="trailing" secondItem="cid-bx-qjB" secondAttribute="trailing" constant="20" id="pdE-JW-xH7"/>
                             <constraint firstItem="hXm-A9-DuM" firstAttribute="trailing" secondItem="YCk-Lc-Brc" secondAttribute="trailing" id="uwi-dc-vXG"/>
-                            <constraint firstItem="C8p-GO-YYU" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" constant="20" id="xUZ-Nu-eJu"/>
+                            <constraint firstItem="7Ex-os-AAm" firstAttribute="top" secondItem="cid-bx-qjB" secondAttribute="bottom" constant="21" id="yxq-eX-C8R"/>
+                            <constraint firstItem="cid-bx-qjB" firstAttribute="top" secondItem="fcE-vN-epg" secondAttribute="bottom" constant="9" id="zCU-le-SGE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="czp-vR-drR"/>
                     <connections>
                         <outlet property="searchBar" destination="fcE-vN-epg" id="ax2-Ea-B87"/>
-                        <outlet property="textViewContraindication" destination="8XJ-08-RvM" id="0sl-NZ-tfX"/>
-                        <outlet property="textViewIndication" destination="eKP-G6-nSZ" id="2TY-18-Hwd"/>
+                        <outlet property="segmentControl" destination="cid-bx-qjB" id="MsS-we-iCg"/>
+                        <outlet property="segmentControlText" destination="7Ex-os-AAm" id="xYe-2F-YcN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vy0-pj-aGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

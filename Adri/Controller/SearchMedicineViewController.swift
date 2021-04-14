@@ -13,9 +13,10 @@ import MLKit
 class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var textViewIndication: UITextView!
-    @IBOutlet weak var textViewContraindication: UITextView!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var segmentControlText: UITextView!
 
+    var indicationText, contraindicationText: String!
     let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var translator: Translator!
 
@@ -23,6 +24,17 @@ class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         searchBar.delegate = self
         setDismissKeyboard()
+    }
+
+    @IBAction func selectSegment(_ sender: UISegmentedControl) {
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            segmentControlText.text = self.indicationText
+        case 1:
+            segmentControlText.text = self.contraindicationText
+        default:
+            break
+        }
     }
 
     func setDismissKeyboard() {
@@ -75,9 +87,10 @@ class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
                         self.translate(from: "en", text: textOne + " | " + textTwo, completionHandler: { [weak self] text in
                             guard let self = self else { return }
                             DispatchQueue.main.async {
-                                    let separetedString = text.components(separatedBy: " | ")
-                                    self.textViewIndication.text = separetedString[0]
-                                    self.textViewContraindication.text = separetedString[1]
+                                let separetedString = text.components(separatedBy: " | ")
+                                self.indicationText = separetedString[0]
+                                self.contraindicationText = separetedString[1]
+                                self.segmentControlText.text = self.indicationText
                             }
                         })
                     }
@@ -110,7 +123,7 @@ class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
     }
 
     @IBAction func saveButton(_ sender: Any) {
-        save(name: (searchBar.text)!, textOne: textViewIndication.text, textTwo: textViewContraindication.text)
+        save(name: (searchBar.text)!, textOne: indicationText, textTwo: contraindicationText)
         tabBarController?.selectedIndex = 0
     }
     
