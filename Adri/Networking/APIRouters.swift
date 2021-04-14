@@ -11,7 +11,6 @@ import Foundation
 enum APIRouters: Router {
 
     case search
-    case assinar
 
     var hostname: String {
         get {
@@ -27,9 +26,7 @@ enum APIRouters: Router {
         get {
             switch self {
             case .search: return "\(hostname)/drug/label.json?search=indications_and_usage:"
-            case .assinar: return "\(hostname)/presenca/assinar"
             }
         }
     }
-
 }
