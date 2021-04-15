@@ -24,6 +24,7 @@ class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         searchBar.delegate = self
         setDismissKeyboard()
+        segmentControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
     }
 
     @IBAction func selectSegment(_ sender: UISegmentedControl) {
@@ -81,18 +82,28 @@ class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
                     if let results = informations?["results"] as? [[String: Any]] {
                         let indications = results[0]["indications_and_usage"] as? [String]
                         let contraindications = results[0]["contraindications"] as? [String]
-                        let textOne = indications!.joined(separator:"-")
-                        let textTwo = contraindications!.joined(separator:"-")
+                        var textOne = indications!.joined(separator:"-")
+                        if let textTwo = contraindications?.joined(separator:"-") {
+                            textOne.append(" | " + textTwo)
+                        }
 
-                        self.translate(from: "en", text: textOne + " | " + textTwo, completionHandler: { [weak self] text in
+                        self.translate(from: "en", text: textOne, completionHandler: { [weak self] text in
                             guard let self = self else { return }
                             DispatchQueue.main.async {
                                 let separetedString = text.components(separatedBy: " | ")
                                 self.indicationText = separetedString[0]
-                                self.contraindicationText = separetedString[1]
+                                if textOne.contains("|") {
+                                    self.contraindicationText = separetedString[1]
+                                }
                                 self.segmentControlText.text = self.indicationText
                             }
                         })
+                    }
+                } else if response.statusCode == 404 {
+                    DispatchQueue.main.async {
+                        let alertController = UIAlertController(title: "Medicamento não encontrado.", message: errorMessage, preferredStyle: .alert)
+                        alertController.addAction(UIAlertAction(title: "Entendi", style: .default))
+                        self.present(alertController, animated: true, completion: nil)
                     }
                 }
             }
@@ -123,7 +134,7 @@ class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
     }
 
     @IBAction func saveButton(_ sender: Any) {
-        save(name: (searchBar.text)!, textOne: indicationText, textTwo: contraindicationText)
+        save(name: (searchBar.text)!, textOne: indicationText, textTwo: contraindicationText ?? "")
         tabBarController?.selectedIndex = 0
     }
     

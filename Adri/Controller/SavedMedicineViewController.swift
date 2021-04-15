@@ -20,6 +20,7 @@ class SavedMedicineViewController: UIViewController {
         super.viewDidLoad()
         segmentControlText.text = textOne
         navBar.topItem?.title = name
+        segmentControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
     }
 
     @IBAction func selectSegment(_ sender: UISegmentedControl) {
