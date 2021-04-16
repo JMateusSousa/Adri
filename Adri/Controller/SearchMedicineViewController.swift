@@ -15,6 +15,7 @@ class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var segmentControlText: UITextView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     var indicationText, contraindicationText: String!
     let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -25,6 +26,7 @@ class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
         searchBar.delegate = self
         setDismissKeyboard()
         segmentControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
+        activityIndicator.hidesWhenStopped = true
     }
 
     @IBAction func selectSegment(_ sender: UISegmentedControl) {
@@ -52,6 +54,8 @@ class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
         let medicine = searchBar.text!.lowercased()
         view.endEditing(true)
         setInformations(medicine: medicine)
+        activityIndicator.startAnimating()
+        self.segmentControlText.isHidden = true
     }
 
     func setInformations(medicine: String) {
@@ -96,6 +100,8 @@ class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
                                     self.contraindicationText = separetedString[1]
                                 }
                                 self.segmentControlText.text = self.indicationText
+                                self.activityIndicator.stopAnimating()
+                                self.segmentControlText.isHidden = false
                             }
                         })
                     }
@@ -104,6 +110,8 @@ class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
                         let alertController = UIAlertController(title: "Medicamento não encontrado.", message: errorMessage, preferredStyle: .alert)
                         alertController.addAction(UIAlertAction(title: "Entendi", style: .default))
                         self.present(alertController, animated: true, completion: nil)
+                        self.activityIndicator.stopAnimating()
+                        self.segmentControlText.isHidden = false
                     }
                 }
             }
@@ -159,6 +167,14 @@ class SearchMedicineViewController: UIViewController, UISearchBarDelegate {
 
         } catch let error as NSError {
             print("Data Could Not FOund. \(error), \(error.userInfo)")
+        }
+    }
+}
+
+extension SearchMedicineViewController {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        if searchBar.text == "" {
+            segmentControlText.text = ""
         }
     }
 }

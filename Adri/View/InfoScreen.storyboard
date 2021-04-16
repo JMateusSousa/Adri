@@ -85,6 +85,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Zbv-GJ-a5s">
+                                <rect key="frame" x="154" y="397" width="107" height="94"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YCk-Lc-Brc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -98,7 +101,9 @@
                             <constraint firstItem="fcE-vN-epg" firstAttribute="trailing" secondItem="YCk-Lc-Brc" secondAttribute="trailing" id="MOQ-5F-DYf"/>
                             <constraint firstItem="fcE-vN-epg" firstAttribute="top" secondItem="hXm-A9-DuM" secondAttribute="bottom" constant="24" id="NPB-2k-USy"/>
                             <constraint firstItem="cid-bx-qjB" firstAttribute="centerX" secondItem="YCk-Lc-Brc" secondAttribute="centerX" id="X5A-Im-c0x"/>
+                            <constraint firstItem="Zbv-GJ-a5s" firstAttribute="centerX" secondItem="7Ex-os-AAm" secondAttribute="centerX" id="bpX-ZD-DRT"/>
                             <constraint firstItem="YCk-Lc-Brc" firstAttribute="trailing" secondItem="7Ex-os-AAm" secondAttribute="trailing" constant="20" id="fV0-9p-iuP"/>
+                            <constraint firstItem="Zbv-GJ-a5s" firstAttribute="centerY" secondItem="7Ex-os-AAm" secondAttribute="centerY" id="fXr-mO-oNq"/>
                             <constraint firstItem="YCk-Lc-Brc" firstAttribute="trailing" secondItem="Lqu-ke-L1u" secondAttribute="trailing" constant="121" id="iGA-oK-6lc"/>
                             <constraint firstItem="cid-bx-qjB" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" constant="20" id="mUV-WY-c24"/>
                             <constraint firstItem="fcE-vN-epg" firstAttribute="leading" secondItem="YCk-Lc-Brc" secondAttribute="leading" id="pHI-33-eIA"/>
@@ -110,6 +115,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="czp-vR-drR"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Zbv-GJ-a5s" id="uJt-RT-oXK"/>
                         <outlet property="searchBar" destination="fcE-vN-epg" id="ax2-Ea-B87"/>
                         <outlet property="segmentControl" destination="cid-bx-qjB" id="MsS-we-iCg"/>
                         <outlet property="segmentControlText" destination="7Ex-os-AAm" id="xYe-2F-YcN"/>
