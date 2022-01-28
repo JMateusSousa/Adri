@@ -26,7 +26,7 @@ class MedicineSearchView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Find Medicines"
         label.font = UIFont.systemFont(ofSize: 34, weight: .regular)
-        label.textColor = UIColor.init(displayP3Red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
+        label.textColor = .white
         label.textAlignment = .center
         
         return label
@@ -50,10 +50,20 @@ class MedicineSearchView: UIView {
         return searchBar
     }()
     
+    lazy var segmentControl: UISegmentedControl = {
+        let segment = UISegmentedControl.init(items: ["Indications", "Contraindications"])
+        segment.translatesAutoresizingMaskIntoConstraints = false
+        segment.selectedSegmentIndex = 0
+        segment.selectedSegmentTintColor = UIColor.init(displayP3Red: 93/255, green: 108/255, blue: 248/255, alpha: 1)
+
+        return segment
+    }()
+    
     func addSubViews() {
         self.addSubview(titleLabel)
         self.addSubview(tableView)
         self.tableView.addSubview(searchBar)
+        self.tableView.addSubview(segmentControl)
     }
 
     func setConstraints() {
@@ -75,6 +85,12 @@ class MedicineSearchView: UIView {
             searchBar.topAnchor.constraint(equalTo: self.tableView.topAnchor, constant: 10),
             searchBar.leftAnchor.constraint(equalTo: self.tableView.leftAnchor),
             searchBar.rightAnchor.constraint(equalTo: self.tableView.rightAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            segmentControl.topAnchor.constraint(equalTo: self.searchBar.bottomAnchor, constant: 10),
+            segmentControl.widthAnchor.constraint(equalTo: self.tableView.widthAnchor, multiplier: 0.8),
+            segmentControl.centerXAnchor.constraint(equalTo: self.tableView.centerXAnchor)
         ])
     }
 }
